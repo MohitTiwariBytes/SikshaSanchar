@@ -1,0 +1,48 @@
+.home-page-main {
+  height: 100%;
+  width: 100%;
+}
+
+.homepage {
+  width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.topRegister {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.topRegister img {
+  height: 190px;
+}
+
+.topRegister h4 {
+  position: relative;
+  margin-top: -50px;
+}
+
+.bottomRegister {
+  width: 90%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  padding: 23px;
+  border-radius: 23px;
+  background: rgb(255, 162, 74);
+}
+
+.bottomRegister img {
+  height: 200px;
+}
