@@ -98,6 +98,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  margin-top: 200px;
 }
 
 @media (max-width: 646px) {
