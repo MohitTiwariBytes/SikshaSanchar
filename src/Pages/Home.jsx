@@ -24,8 +24,18 @@ const Home = () => {
       </div>
 
       <div className="homepage-mobile">
-        <div className="welcome">
-          <h1>Welcome! I see, You are not enrolled into any E-SCHOOL</h1>
+        <div className="topRegisterMobile">
+          <img style={{ height: "290px" }} src={logo} alt="" id="logo" />
+          <h4>An educational app for all the schools in india!</h4>
+        </div>
+
+        <div className="bottomRegisterMobile">
+          <h1>Welcome!</h1>
+          <h4>Join or register a school to continue.</h4>
+          <div className="regButtons">
+            <button id="registerSchool">Register</button>
+            <button id="joinByID">Join By ID</button>
+          </div>
         </div>
       </div>
     </div>
