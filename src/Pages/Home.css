@@ -65,7 +65,13 @@
   background: #264595;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
   border: 1px solid black;
+  transition: all 0.2s ease;
+}
+
+.regButtons button:hover {
+  transform: scale(1.1);
 }
 
 .homepage-mobile {
@@ -102,9 +108,62 @@
   margin-top: 200px;
 }
 
+.joinCard {
+  width: 500px;
+  padding: 40px;
+  background: #284493;
+  position: fixed;
+  z-index: 100;
+  top: 200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: rgb(241, 241, 241);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.joinCard h1 {
+  font-size: 23px;
+}
+
+.joinCard input {
+  width: 200px;
+  border-radius: 14px;
+  border: 1px solid black;
+  margin-top: 30px;
+  padding: 23px;
+}
+
+.joinCard button {
+  padding: 24px;
+  width: 200px;
+  background: #ff904c;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: all 0.2s ease;
+  margin-top: 30px;
+}
+
+.joinCard button:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 646px) {
   .homepage {
     display: none;
+  }
+
+  .joinCard {
+    width: 80%;
+  }
+
+  .joinCard h1 {
+    font-size: 20px;
   }
 
   .homepage-mobile {

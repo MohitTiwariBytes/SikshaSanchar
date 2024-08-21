@@ -1,11 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import logo from "../Assets/logoTransparent.png";
 import illu1 from "../Assets/illustration1.svg";
+import gsap from "gsap";
 
 const Home = () => {
+  const [isJoinOpen, setJoinOpen] = useState(false);
+
+  function handleJoinOpenClick() {
+    setJoinOpen(!isJoinOpen);
+
+    if (isJoinOpen) {
+      gsap.fromTo(
+        ".joinCard",
+        {
+          top: "200%",
+          duration: 0.5,
+          ease: "power3.out",
+        },
+        {
+          top: "50%",
+          duration: 0.5,
+          ease: "power3.out",
+        }
+      );
+    } else {
+      gsap.fromTo(
+        ".joinCard",
+        {
+          top: "50%",
+          duration: 0.5,
+          ease: "power3.out",
+        },
+        {
+          top: "200%",
+          duration: 0.5,
+          ease: "power3.out",
+        }
+      );
+    }
+  }
+
   return (
     <div className="home-page-main">
+      <div className="joinCard">
+        <i
+          style={{
+            cursor: "pointer",
+            position: "absolute",
+            top: "20px",
+            left: "40px",
+          }}
+          onClick={handleJoinOpenClick}
+          class="fa-solid fa-xmark fa-2x"
+        ></i>
+        <h1>Enter your school's UDISE code</h1>
+        <input type="text" placeholder="Enter 11 digit UDISE code" />
+        <button id="nextJoin">Next</button>
+      </div>
+      <div className="registerCard"></div>
       <div className="homepage">
         <div className="topRegister">
           <img src={logo} alt="" id="logo" />
@@ -17,7 +70,9 @@ const Home = () => {
             <h1>Register your E-SCHOOL Now!</h1>
             <div className="regButtons">
               <button id="registerSchool">Register</button>
-              <button id="joinByID">Join By ID</button>
+              <button onClick={handleJoinOpenClick} id="joinByID">
+                Join By UDISE
+              </button>
             </div>
           </div>
         </div>
@@ -34,7 +89,9 @@ const Home = () => {
           <h4>Join or register a school to continue.</h4>
           <div className="regButtons">
             <button id="registerSchool">Register</button>
-            <button id="joinByID">Join By ID</button>
+            <button onClick={handleJoinOpenClick} id="joinByID">
+              Join By UDISE
+            </button>
           </div>
         </div>
       </div>
